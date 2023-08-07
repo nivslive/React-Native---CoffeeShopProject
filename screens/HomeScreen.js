@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity, TextInput, FlatList, Dimensions, Platform } from 'react-native'
+import { View, Text, Image, TouchableOpacity, TextInput, FlatList, Dimensions, Platform, ScrollView } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import {themeColors} from '../theme';
@@ -8,7 +8,6 @@ import Carousel from 'react-native-snap-carousel';
 import CoffeeCard from '../components/coffeeCard';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { MapPinIcon } from 'react-native-heroicons/solid'
-
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
 export default function HomeScreen() {
@@ -69,28 +68,25 @@ export default function HomeScreen() {
             }}
           />
         </View>
+        <View className="pt-2 ">
+          
+          
+          <ScrollView>
+            {/* Renderize os cartões de café dentro do ScrollView */}
+            {coffeeItems.map((item) => (
+              <CoffeeCard key={item.id} item={item} />
+            ))}
+          </ScrollView>  
+          
+        </View>
 
         
           
       </SafeAreaView>
 
       {/* coffee cards */}
-      <View className={`overflow-visible flex justify-center flex-1 ${ios? 'mt-10':''}`}>
-        <View>
-          <Carousel
-            containerCustomStyle={{overflow: 'visible'}}
-            data={coffeeItems}
-            renderItem={({item})=> <CoffeeCard item={item} />}
-            firstItem={1}
-            loop={true}
-            inactiveSlideScale={0.75}
-            inactiveSlideOpacity={0.75}
-            removeClippedSubviews={false}
-            sliderWidth={width}
-            itemWidth={width*0.63}
-            slideStyle={{display: 'flex', alignItems: 'center'}}
-          />
-        </View>
+      <View className={`overflow-scroll flex justify-center ${ios? 'mt-10':''}`}>
+
         
       </View>
       
