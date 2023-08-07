@@ -39,11 +39,12 @@ function HomeTabs(){
         tabBarShowLabel: false,
         tabBarIcon: ({ focused }) => menuIcons(route, focused),
         tabBarStyle: {
+          display: "none",
           marginBottom: 20,
-          height: 75,
+          height: 60,
           alignItems: 'center',
           
-          borderRadius: 100,
+          borderRadius: 20,
           marginHorizontal: 20,
           backgroundColor: themeColors.bgLight,
 

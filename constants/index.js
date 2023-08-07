@@ -1,37 +1,33 @@
-// we will be using this dummy data,
-// don't worry, you can find this data in the git repo 
-// you can find the git repo link in the description ;)
-
 export const categories = [
   {
     id: 1,
-    title: "Cappuccino",
+    title: "Codigos/Desenvolvimento",
   },
   {
     id: 2,
-    title: "Latte",
+    title: "Games",
   },
   {
     id: 3,
-    title: "Espresso",
+    title: "Noticias",
   },
   {
     id: 4,
-    title: "Mocha",
+    title: "Bombando agora",
   },
   {
     id: 5,
-    title: "Americano",
+    title: "Últimas perguntas",
   },
 ]
 
 export const coffeeItems = [
   {
     id: 1,
-    name: 'Black Coffee',
+    name: 'Renato gonçalves',
     price: '25.50',
     volume: '116 ml',
-    stars: '4.6',
+    stars: '59',
     image: require('../assets/images/coffee1.png'),
     desc: 'The taste of coffee can vary depending on factors such as the type of beans, roast level, brewing method, and the addition of any flavors or sweeteners.'
   },

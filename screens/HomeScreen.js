@@ -46,7 +46,6 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
         </View>
-        {/* categories */}
         <View className="px-5 mt-6">
           <FlatList 
             horizontal
@@ -55,12 +54,12 @@ export default function HomeScreen() {
             keyExtractor={item=> item.id}
             className="overflow-visible"
             renderItem={({item})=>{
-              let isActive = item.id==activeCategory;
+              let isActive = item.id === activeCategory;
               let activeTextClass = isActive? 'text-white': 'text-gray-700';
               return (
                 <TouchableOpacity 
                 onPress={()=> setActiveCategory(item.id)}
-                style={{backgroundColor: isActive? themeColors.bgLight: 'rgba(0,0,0,0.07)'}} 
+                style={{backgroundColor: isActive? themeColors.bgLight : 'rgba(0,0,0,0.07)'}} 
                 className="p-4 px-5 mr-2 rounded-full shadow">
                   <Text className={"font-semibold " + activeTextClass}>{item.title}</Text>
                 </TouchableOpacity>
