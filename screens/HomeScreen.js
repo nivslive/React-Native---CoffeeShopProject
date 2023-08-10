@@ -8,6 +8,7 @@ import Carousel from 'react-native-snap-carousel';
 import CoffeeCard from '../components/coffeeCard';
 import { BellIcon, MagnifyingGlassIcon } from 'react-native-heroicons/outline'
 import { MapPinIcon } from 'react-native-heroicons/solid'
+import Qr from '../components/qrCode';
 const {width, height} = Dimensions.get('window');
 const ios = Platform.OS == 'ios';
 export default function HomeScreen() {
@@ -16,7 +17,6 @@ export default function HomeScreen() {
   return (
     <View className="flex-1 relative bg-white">
       <StatusBar />
-
       <Image 
         source={require('../assets/images/beansBackground1.png')} 
         style={{height: height*0.2}} 
@@ -36,6 +36,7 @@ export default function HomeScreen() {
           <BellIcon size="27" color="black" />
         </View>
         {/* search bar */}
+        <Qr />
         <View className="mx-5 shadow" style={{marginTop: height*0.06}}>
           <View className="flex-row items-center rounded-full p-1 bg-[#e6e6e6]">
             <TextInput placeholder='Search' className="p-4 flex-1 font-semibold text-gray-700" />
