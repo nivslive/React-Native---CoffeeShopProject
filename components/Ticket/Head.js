@@ -23,7 +23,7 @@ const Head = () => {
                 </View>
 
                 <View className="ml-auto">
-                    <MyText weight="bold" customClassName="text-white">Image</MyText>
+                    {/* <MyText weight="bold" customClassName="text-white">Image</MyText> */}
                 </View>
 
 

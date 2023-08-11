@@ -61,6 +61,7 @@ function HomeTabs(){
       >
       <Tab.Screen name="home" component={HomeScreen} />
       <Tab.Screen name="favourite" component={HomeScreen} />
+      <Tab.Screen name="TableList" component={TableListScreen} />
       <Tab.Screen name="cart" component={HomeScreen} />
     </Tab.Navigator>
   )

@@ -1,18 +1,21 @@
 import { Text, View } from "react-native";
 import Qr from '../../qrCode';
+import MyText from "../../defaults/MyText";
 const Content = () => {
     return (
         <>
-            <View>
-                <Text> Andrew Daniels </Text>
-                <Text> Section 202F </Text>
-                <Text> Seat 19F </Text>
+            <View className="p-5">
                 <View>
-                    <Text> Purchased</Text>
-                    <Text> $2,202</Text>
+                <MyText weight="bold" customClassName="text-[25px]"> Nivs </MyText>
+                <MyText weight="regular" customClassName="text-[20px]"> nivsoficial@gmail.com </MyText>
                 </View>
-                <View> Card ending in 4214 </View>
-                <Qr/>
+                <View className="flex-row">
+                <MyText weight="bold" customClassName="text-[18px]"> Comprado </MyText>
+                <MyText weight="bold" customClassName="text-[18px] ml-auto"> $2,202 </MyText>
+                </View>
+                <MyText weight="regular" customClassName="text-[17px]"> (No dia 18/04/2022) </MyText>
+                <View className="flex justify-center items-center p-5 m-3"><Qr/></View>
+                <Text className="text-center text-[20px]">#421M421O24O1JD2019094</Text>
             </View>
         </>
     )

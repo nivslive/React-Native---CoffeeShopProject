@@ -63,7 +63,7 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
         </View> */}
-        <View className="h-full pt-2 flex justify-center items-center">
+        <View className="pt-2 flex justify-center items-center">
           <Ticket/>
           <Text className="pt-3">HTX821940142M</Text>
         </View>

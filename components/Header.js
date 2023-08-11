@@ -5,10 +5,15 @@ import { categories } from "../constants";
 import { useState } from "react";
 import MyText from "./defaults/MyText";
 import BackButton from "./BackButton";
+import { useNavigation } from "@react-navigation/native";
 const Header = () => {
     const [activeCategory, setActiveCategory] = useState(1);
+    const navigation = useNavigation();
+    function navigateTo() {
+        navigation.navigate('TableList')
+    }
     return(
-        <View className="bg-black py-4">
+        <View className="bg-black pt-[60px]">
         <View className="mx-4 mb-5 flex-row justify-between items-center">
           <Image source={require('../assets/images/avatar.png')} 
             className="h-9 w-9 rounded-full" />
@@ -48,7 +53,7 @@ const Header = () => {
               let activeTextClass = isActive? 'text-white': 'text-white';
               return (
                 <TouchableOpacity 
-                onPress={()=> setActiveCategory(item.id)}
+                onPress={()=> {setActiveCategory(item.id); navigateTo()}}
                 style={{backgroundColor: isActive? themeColors.bgLight : '#212121'}} 
                 className="p-4 px-5 mr-2 rounded shadow">
                   <Text className={"font-semibold " + activeTextClass}>{item.title}</Text>

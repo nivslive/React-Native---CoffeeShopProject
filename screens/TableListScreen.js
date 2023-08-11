@@ -4,8 +4,8 @@ import ItemList from "../components/itemList";
 import Header from "../components/Header";
 const TableListScreen = () => {
   return (<>
-        <ScrollView className="p-[30px]">
           <Header/>
+        <ScrollView className="w-[100%] p-[30px]">
           <ItemList text="oi"/>
           <ItemList text="oi"/>
           <ItemList text="oi"/>

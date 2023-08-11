@@ -4,10 +4,10 @@ import QRCode from 'react-native-qrcode-svg';
 const qr = () => {
 //   let base64Logo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAA..';
   return (
-    <QRCode
+    <QRCode className="p-3"
         value="Just some string value"
         // logo={{uri: base64Logo}}
-        size={300}
+        size={250}
         logoBackgroundColor='transparent'
     />
   );
