@@ -1,23 +1,19 @@
 export const categories = [
   {
     id: 1,
-    title: "Codigos/Desenvolvimento",
+    title: "Ingresso",
   },
   {
     id: 2,
-    title: "Games",
+    title: "Lineup",
   },
   {
     id: 3,
-    title: "Noticias",
+    title: "Detalhes Gerais",
   },
   {
     id: 4,
-    title: "Bombando agora",
-  },
-  {
-    id: 5,
-    title: "Últimas perguntas",
+    title: "Pode ou não pode",
   },
 ]
 
